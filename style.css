@@ -1,0 +1,103 @@
+body {
+   background-image: url(heart2.jpg);
+   background-repeat: no-repeat;
+
+   background-position: center center;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+h1 {
+   color: rgb(134, 67, 67);
+   text-align: center;
+   background-position: 20pt;
+}
+p {
+   color: rgb(171, 83, 83);
+   margin-left: auto;
+   margin-right: auto;
+   width: 28em;
+}
+
+body .textcontainer {
+   padding: 40px 0;
+   text-align: center;
+}
+body .particletext {
+   text-align: center;
+   font-size: 48px;
+   position: relative;
+}
+.particletext.hearts {
+   color: #ff0252;
+}
+
+body .particletext.hearts > .particle {
+   opacity: 0;
+   position: absolute;
+   background-color: #ff0051;
+   -webkit-animation: hearts 3s ease-in infinite;
+   animation: hearts 3s ease-in infinite;
+}
+body .particletext.hearts > .particle:before,
+body .particletext.hearts > .particle:after {
+   position: absolute;
+   content: " ";
+   border-radius: 100px;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: #ff0051;
+}
+body .particletext.hearts > .particle:before {
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+}
+body .particletext.hearts > .particle:after {
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+@-webkit-keyframes hearts {
+   0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+   }
+   20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+   }
+   100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+   }
+}
+@keyframes hearts {
+   0% {
+      opacity: 0;
+      -webkit-transform: translate(0, 0%) rotate(45deg);
+      transform: translate(0, 0%) rotate(45deg);
+   }
+   20% {
+      opacity: 0.8;
+      -webkit-transform: translate(0, -20%) rotate(45deg);
+      transform: translate(0, -20%) rotate(45deg);
+   }
+   100% {
+      opacity: 0;
+      -webkit-transform: translate(0, -1000%) rotate(45deg);
+      transform: translate(0, -1000%) rotate(45deg);
+   }
+}
+#c {
+   display: block;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
